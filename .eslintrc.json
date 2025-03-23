@@ -39,6 +39,9 @@
             {
                 "allowAsStatement": true
             }
-        ]
+        ],
+        "@typescript-eslint/lines-between-class-members": "off",
+        "@typescript-eslint/no-throw-literal": "off",
+        "@typescript-eslint/only-throw-error": "error"
     }
 }
