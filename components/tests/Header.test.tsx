@@ -2,8 +2,15 @@ import { render, screen } from "@testing-library/react";
 import Header from "../Header";
 import UserIcon from "@/public/MyIcon.jpg";
 
-describe("ヘッダーコンポーネントのテスト", () => {
+beforeEach(() => {
   render(<Header />);
+});
+
+describe("ヘッダーコンポーネントのテスト", () => {
+  test("ユーザーネームが表示されるか",()=>{
+    const userName = screen.getByText("Mittiii");
+    expect(userName).toBeInTheDocument();
+  });
 
   test("ヘッダーにユーザーアイコンがあるか", () => {
     const expectedImageSrc = UserIcon.src;

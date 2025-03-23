@@ -15,11 +15,24 @@ const Wrapper = styled.div`
   box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
 `;
 
-const UserContainer = styled.div`
+const NameContainer = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 10px
+`;
+
+const NameText = styled.p`
+  font-size: 3.5em;
+  font-weight: bold;
+`;
+
+const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 10px
 `;
 
 const UserIconImage = styled(Image)`
@@ -35,12 +48,15 @@ const UserIconImage = styled(Image)`
 const Header = () => {
   return (
     <Wrapper>
-      <UserContainer>
+      <NameContainer>
+        <NameText>Mittiii</NameText>
+      </NameContainer>
+      <IconContainer>
         <UserIconImage
           src={UserIcon}
           alt="ユーザーアイコン"
         />
-      </UserContainer>
+      </IconContainer>
     </Wrapper>
   );
 };
