@@ -1,0 +1,44 @@
+{
+    "extends": [
+        "airbnb",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb-typescript",
+        "next/core-web-vitals"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "no-alert": "error",
+        "no-console": ["warn", { "allow": ["error"] }],
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "return"
+            }
+        ],
+        "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+        "camelcase": ["error", { "properties": "always" }],
+        "prefer-destructuring": [
+            "error",
+            {
+                "AssignmentExpression": {
+                    "array": false
+                }
+            }
+        ],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": "error",
+        "no-void": [
+            "error",
+            {
+                "allowAsStatement": true
+            }
+        ]
+    }
+}
