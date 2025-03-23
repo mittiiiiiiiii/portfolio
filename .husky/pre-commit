@@ -1,0 +1,3 @@
+yarn lint-staged
+
+CI=true yarn test -o
