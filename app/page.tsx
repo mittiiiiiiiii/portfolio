@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
-const Home = () => {
+const App = () => {
   redirect("/Home");
 };
 
-export default Home;
+export default App;
