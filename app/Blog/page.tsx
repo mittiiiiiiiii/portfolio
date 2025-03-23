@@ -2,7 +2,7 @@
 
 import MakingMessage from "@/components/makeingMessage";
 
-const Home = () => {
+const Blog = () => {
   return (
     <>
       <MakingMessage />
@@ -10,4 +10,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Blog;

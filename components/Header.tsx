@@ -2,6 +2,8 @@
 
 import styled from "styled-components";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import UserIcon from "@/public/MyIcon.jpg";
 
@@ -10,6 +12,7 @@ const Wrapper = styled.div`
   height: 80px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: #000;
   color: #fff;
   box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
@@ -25,6 +28,11 @@ const NameContainer = styled.div`
 const NameText = styled.p`
   font-size: 3.5em;
   font-weight: bold;
+`;
+
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 const IconContainer = styled.div`
@@ -45,15 +53,69 @@ const UserIconImage = styled(Image)`
   margin: 0 10px;
 `;
 
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+`;
+
+const HomeLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const BlogLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const TwitterLink= styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Header = () => {
+  const router = useRouter();
+  const twitterUrl = process.env.NEXT_PUBLIC_TWITTER_URL || "";
+
   return (
     <Wrapper>
       <NameContainer>
         <NameText>Mittiii</NameText>
       </NameContainer>
-      <IconContainer>
-        <UserIconImage src={UserIcon} alt="ユーザーアイコン" />
-      </IconContainer>
+      <RightContainer>
+        <LinkContainer>
+          <HomeLink onClick={() => router.push("/Home")}>Home</HomeLink>
+          <BlogLink onClick={() => router.push("/Blog")}>Blog</BlogLink>
+          <TwitterLink href={twitterUrl} target="_blank" rel="noopener noreferrer">X(Twitter)</TwitterLink>
+        </LinkContainer>
+        <IconContainer>
+          <UserIconImage src={UserIcon} alt="ユーザーアイコン" />
+        </IconContainer>
+      </RightContainer>
     </Wrapper>
   );
 };
