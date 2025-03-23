@@ -8,7 +8,9 @@ export const metadata: Metadata = {
 const RootLayout = async ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="ja">
-      <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 };
