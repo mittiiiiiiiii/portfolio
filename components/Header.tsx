@@ -67,6 +67,18 @@ const HomeLink = styled.a`
   }
 `;
 
+const BlogLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const TwitterLink= styled(Link)`
   color: #fff;
   text-decoration: none;
@@ -90,6 +102,7 @@ const Header = () => {
       </NameContainer>
       <LinkContainer>
         <HomeLink onClick={() => router.push("/Home")}>Home</HomeLink>
+        <BlogLink onClick={() => router.push("/Blog")}>Blog</BlogLink>
         <TwitterLink href={twitterUrl} target="_blank" rel="noopener noreferrer">X(Twitter)</TwitterLink>
       </LinkContainer>
       <IconContainer>

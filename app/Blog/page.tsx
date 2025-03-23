@@ -2,7 +2,7 @@
 import Header from "@/components/Header";
 import MakingMessage from "@/components/makeingMessage";
 
-const Home = () => {
+const Blog = () => {
   return (
     <>
       <Header />
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Blog;
