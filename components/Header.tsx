@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   height: 80px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: #000;
   color: #fff;
   box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
@@ -27,6 +28,11 @@ const NameContainer = styled.div`
 const NameText = styled.p`
   font-size: 3.5em;
   font-weight: bold;
+`;
+
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 const IconContainer = styled.div`
@@ -100,14 +106,16 @@ const Header = () => {
       <NameContainer>
         <NameText>Mittiii</NameText>
       </NameContainer>
-      <LinkContainer>
-        <HomeLink onClick={() => router.push("/Home")}>Home</HomeLink>
-        <BlogLink onClick={() => router.push("/Blog")}>Blog</BlogLink>
-        <TwitterLink href={twitterUrl} target="_blank" rel="noopener noreferrer">X(Twitter)</TwitterLink>
-      </LinkContainer>
-      <IconContainer>
-        <UserIconImage src={UserIcon} alt="ユーザーアイコン" />
-      </IconContainer>
+      <RightContainer>
+        <LinkContainer>
+          <HomeLink onClick={() => router.push("/Home")}>Home</HomeLink>
+          <BlogLink onClick={() => router.push("/Blog")}>Blog</BlogLink>
+          <TwitterLink href={twitterUrl} target="_blank" rel="noopener noreferrer">X(Twitter)</TwitterLink>
+        </LinkContainer>
+        <IconContainer>
+          <UserIconImage src={UserIcon} alt="ユーザーアイコン" />
+        </IconContainer>
+      </RightContainer>
     </Wrapper>
   );
 };
