@@ -19,7 +19,7 @@ const NameContainer = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  margin: 0 10px
+  margin: 0 10px;
 `;
 
 const NameText = styled.p`
@@ -32,7 +32,7 @@ const IconContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 10px
+  margin: 0 10px;
 `;
 
 const UserIconImage = styled(Image)`
@@ -42,7 +42,7 @@ const UserIconImage = styled(Image)`
   object-fit: cover;
   cursor: pointer;
   border: 2px solid #fff;
-  margin: 0 10px
+  margin: 0 10px;
 `;
 
 const Header = () => {
@@ -52,10 +52,7 @@ const Header = () => {
         <NameText>Mittiii</NameText>
       </NameContainer>
       <IconContainer>
-        <UserIconImage
-          src={UserIcon}
-          alt="ユーザーアイコン"
-        />
+        <UserIconImage src={UserIcon} alt="ユーザーアイコン" />
       </IconContainer>
     </Wrapper>
   );

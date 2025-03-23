@@ -7,7 +7,7 @@ beforeEach(() => {
 });
 
 describe("ヘッダーコンポーネントのテスト", () => {
-  test("ユーザーネームが表示されるか",()=>{
+  test("ユーザーネームが表示されるか", () => {
     const userName = screen.getByText("Mittiii");
     expect(userName).toBeInTheDocument();
   });

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useServerInsertedHTML } from 'next/navigation';
-import { ServerStyleSheet, StyleSheetManager, createGlobalStyle } from 'styled-components';
+import React, { useState } from "react";
+import { useServerInsertedHTML } from "next/navigation";
+import { ServerStyleSheet, StyleSheetManager, createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -36,7 +36,7 @@ export default function StyledComponentsRegistry({ children }: { children: React
     return styles;
   });
 
-  if (typeof window !== 'undefined') return children;
+  if (typeof window !== "undefined") return children;
 
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
