@@ -2,6 +2,8 @@
 
 import styled from "styled-components";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import UserIcon from "@/public/MyIcon.jpg";
 
@@ -45,12 +47,51 @@ const UserIconImage = styled(Image)`
   margin: 0 10px;
 `;
 
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+`;
+
+const HomeLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const TwitterLink= styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Header = () => {
+  const router = useRouter();
+  const twitterUrl = process.env.NEXT_PUBLIC_TWITTER_URL || "";
+
   return (
     <Wrapper>
       <NameContainer>
         <NameText>Mittiii</NameText>
       </NameContainer>
+      <LinkContainer>
+        <HomeLink onClick={() => router.push("/Home")}>Home</HomeLink>
+        <TwitterLink href={twitterUrl} target="_blank" rel="noopener noreferrer">X(Twitter)</TwitterLink>
+      </LinkContainer>
       <IconContainer>
         <UserIconImage src={UserIcon} alt="ユーザーアイコン" />
       </IconContainer>
