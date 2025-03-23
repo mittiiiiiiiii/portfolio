@@ -32,7 +32,11 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "src/**/*.{css,ts,tsx}":["prettier --write"],
-    "src/**/*.json": ["prettier --write --log-level=warn"]
+    "src/**/*.{css,ts,tsx}": [
+      "prettier --write"
+    ],
+    "src/**/*.json": [
+      "prettier --write --log-level=warn"
+    ]
   }
 }
