@@ -30,9 +30,12 @@
     "eslint-plugin-prettier": "^5.2.3",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
+    "postcss-styled-syntax": "^0.7.1",
     "prettier": "^3.5.3",
     "stylelint": "^16.16.0",
+    "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard": "^37.0.0",
+    "stylelint-order": "^6.0.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
